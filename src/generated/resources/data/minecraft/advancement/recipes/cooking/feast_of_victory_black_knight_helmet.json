@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_black_knight_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dragonsurvival:black_knight_helmet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:cooking/feast_of_victory_black_knight_helmet"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_black_knight_helmet"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:cooking/feast_of_victory_black_knight_helmet"
+    ]
+  }
+}

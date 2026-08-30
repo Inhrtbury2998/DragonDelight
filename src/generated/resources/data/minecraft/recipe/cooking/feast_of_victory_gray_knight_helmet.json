@@ -1,0 +1,35 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "count": 1,
+    "id": "dragonsurvival:gray_knight_helmet"
+  },
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "dragonsdelight:curing_human_meat"
+    },
+    {
+      "type": "neoforge:compound",
+      "children": [
+        {
+          "tag": "c:foods/raw_meat"
+        },
+        {
+          "item": "minecraft:rotten_flesh"
+        }
+      ]
+    },
+    {
+      "item": "minecraft:gold_nugget"
+    },
+    {
+      "tag": "c:foods/vegetable"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "dragonsdelight:feast_of_victory"
+  }
+}
