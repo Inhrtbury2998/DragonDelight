@@ -1,0 +1,9 @@
+{
+  "parent": "dragonsdelight:block/template_pie_slice1",
+  "textures": {
+    "bottom": "dragonsdelight:block/pie_bottom",
+    "inner": "dragonsdelight:block/luminous_pie_inner",
+    "side": "dragonsdelight:block/pie_side",
+    "top": "dragonsdelight:block/luminous_pie_top"
+  }
+}

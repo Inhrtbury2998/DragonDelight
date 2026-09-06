@@ -43,10 +43,12 @@
   "item.dragonsdelight.poisonous_potato_noodles": "毒薯线",
   "item.dragonsdelight.human_flesh": "人肉",
   "item.dragonsdelight.human_flesh_slice": "人肉片",
-  "item.dragonsdelight.cooked_human_flesh": "熟人肉",
-  "item.dragonsdelight.cooked_human_flesh_slice": "熟人肉片",
-  "item.dragonsdelight.pickled_human_meat": "腌制人肉",
-  "item.dragonsdelight.pickled_human_meat_slice": "腌制人肉片",
+  "item.dragonsdelight.cooked_human_meat": "熟人肉",
+  "item.dragonsdelight.cooked_human_meat_slice": "熟人肉片",
+  "item.dragonsdelight.curing_human_meat": "腌制人肉",
+  "item.dragonsdelight.curing_human_meat_slice": "腌制人肉片",
+
+  "block.dragonsdelight.plate": "盘子",
 
   "resourcepack.dragonsdelight.3d_model": "龙之乐事3D模型资源包"
 

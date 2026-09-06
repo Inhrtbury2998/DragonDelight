@@ -43,10 +43,12 @@
   "item.dragonsdelight.poisonous_potato_noodles": "Poisonous potato noodles",
   "item.dragonsdelight.human_flesh": "Human flesh",
   "item.dragonsdelight.human_flesh_slice": "Human flesh slice",
-  "item.dragonsdelight.cooked_human_flesh": "Cooked human flesh",
-  "item.dragonsdelight.cooked_human_flesh_slice": "Cooked human flesh slice",
-  "item.dragonsdelight.pickled_human_meat": "Pickled human meat",
-  "item.dragonsdelight.pickled_human_meat_slice": "Pickled human meat slice",
+  "item.dragonsdelight.cooked_human_meat": "Cooked human flesh",
+  "item.dragonsdelight.cooked_human_meat_slice": "Cooked human flesh slice",
+  "item.dragonsdelight.curing_human_meat": "Pickled human meat",
+  "item.dragonsdelight.curing_human_meat_slice": "Pickled human meat slice",
+
+  "block.dragonsdelight.plate": "Plate",
 
   "resourcepack.dragonsdelight.3d_model": "Dragons Delight 3d model resourcepack"
 }
