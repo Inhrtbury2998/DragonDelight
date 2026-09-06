@@ -23,6 +23,7 @@ public class DataGenerators {
 
         // 物品模型
         generator.addProvider(event.includeClient(), new ModItemModelProvider(packOutput, existingFileHelper));
+        // 配方
         generator.addProvider(event.includeServer(), new DragonsDelightRecipes(packOutput, lookupProvider));
     }
 }
