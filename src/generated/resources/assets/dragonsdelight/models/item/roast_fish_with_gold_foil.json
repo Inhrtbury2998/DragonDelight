@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "dragonsdelight:item/roast_fish_with_gold_foil"
-  }
-}

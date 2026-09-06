@@ -33,7 +33,7 @@
   "item.dragonsdelight.turtle_egg_custard": "Turtle egg custard",
   "item.dragonsdelight.inky_fish_aspic": "Inky fish aspic",
   "item.dragonsdelight.seafood_sauce": "Seafood sauce",
-  "item.dragonsdelight.coral_slow_feeder": "Coral slow feeder",
+  "item.dragonsdelight.coral_chew_bar": "Coral chew bar",
   "item.dragonsdelight.spring_fish": "Spring fish",
   "item.dragonsdelight.crispy_roll": "Crispy roll",
   "item.dragonsdelight.royal_lunchbox": "Royal lunchbox",
@@ -43,7 +43,10 @@
   "item.dragonsdelight.poisonous_potato_noodles": "Poisonous potato noodles",
   "item.dragonsdelight.human_flesh": "Human flesh",
   "item.dragonsdelight.human_flesh_slice": "Human flesh slice",
+  "item.dragonsdelight.cooked_human_flesh": "Cooked human flesh",
+  "item.dragonsdelight.cooked_human_flesh_slice": "Cooked human flesh slice",
   "item.dragonsdelight.pickled_human_meat": "Pickled human meat",
   "item.dragonsdelight.pickled_human_meat_slice": "Pickled human meat slice",
+
   "resourcepack.dragonsdelight.3d_model": "Dragons Delight 3d model resourcepack"
 }

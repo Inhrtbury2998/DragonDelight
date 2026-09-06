@@ -1,0 +1,51 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"parent": "dragonsdelight:block/human_flesh",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "dragonsdelight:block/curing_human_meat",
+		"particle": "dragonsdelight:block/curing_human_meat"
+	},
+	"elements": [
+		{
+			"from": [3, 0, 5],
+			"to": [9, 6, 11],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [5, 0, 5]},
+			"faces": {
+				"north": {"uv": [0, 0, 3, 3], "texture": "#0"},
+				"east": {"uv": [0, 3, 3, 6], "texture": "#0"},
+				"south": {"uv": [3, 0, 6, 3], "texture": "#0"},
+				"west": {"uv": [3, 3, 6, 6], "texture": "#0"},
+				"up": {"uv": [3, 9, 0, 6], "texture": "#0"},
+				"down": {"uv": [9, 0, 6, 3], "texture": "#0"}
+			}
+		},
+		{
+			"from": [9.0782, 0, 3.39315],
+			"to": [11.0782, 5, 9.39315],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [9.0782, 0, 4.39315]},
+			"faces": {
+				"north": {"uv": [3, 10, 4, 12.5], "texture": "#0"},
+				"east": {"uv": [6, 5.5, 9, 8], "texture": "#0"},
+				"south": {"uv": [4, 10, 5, 12.5], "texture": "#0"},
+				"west": {"uv": [6, 8, 9, 10.5], "texture": "#0"},
+				"up": {"uv": [10, 8, 9, 5], "texture": "#0"},
+				"down": {"uv": [10, 8, 9, 11], "texture": "#0"}
+			}
+		},
+		{
+			"from": [5, 0, 10],
+			"to": [11, 5, 13],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [6, 0, 9]},
+			"faces": {
+				"north": {"uv": [3, 6, 6, 8.5], "texture": "#0"},
+				"east": {"uv": [9, 0, 10.5, 2.5], "texture": "#0"},
+				"south": {"uv": [6, 3, 9, 5.5], "texture": "#0"},
+				"west": {"uv": [9, 2.5, 10.5, 5], "texture": "#0"},
+				"up": {"uv": [6, 10, 3, 8.5], "texture": "#0"},
+				"down": {"uv": [3, 9, 0, 10.5], "texture": "#0"}
+			}
+		}
+	]
+}
