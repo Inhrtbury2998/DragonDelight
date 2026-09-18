@@ -99,7 +99,6 @@ public class ModBlocks {
                     4, true, ALL_DRAGONS,
                     () -> new ItemStack[]{
                             new ItemStack(DSBlocks.GOLDEN_KNIGHT_HELMET.value()),
-                            new ItemStack(Items.BONE),
                             new ItemStack(Items.GOLD_NUGGET)
                     }, FEAST_SHAPES));
 
