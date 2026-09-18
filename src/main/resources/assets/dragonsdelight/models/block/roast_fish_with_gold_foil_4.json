@@ -132,5 +132,6 @@
 			"color": 0,
 			"children": [6]
 		}
-	]
+	],
+	"render_type": "cutout"
 }
