@@ -76,6 +76,22 @@ public class DragonsDelightRecipes extends RecipeProvider {
                         0.35F, 100)
                 .unlockedBy("has_fish_roll", has(ModItems.get(ModItemEnum.FISH_ROLL)))
                 .save(output, ResourceLocation.fromNamespaceAndPath("dragonsdelight", "crispy_roll_from_smoking"));
+
+        // 叫花兔：在农夫乐事的炉灶（使用营火烹饪食谱）上烤熟
+        SimpleCookingRecipeBuilder.campfireCooking(
+                        Ingredient.of(ModItems.get(ModItemEnum.BEGGARS_RABBIT)),
+                        RecipeCategory.FOOD,
+                        ModItems.get(ModItemEnum.BEGGARS_RABBIT_COOKED),
+                        0.35F, 600)
+                .unlockedBy("has_beggars_rabbit", has(ModItems.get(ModItemEnum.BEGGARS_RABBIT)))
+                .save(output, ResourceLocation.fromNamespaceAndPath(DragonsDelight.MODID, "beggars_rabbit_cooked_from_campfire_cooking"));
+        SimpleCookingRecipeBuilder.smoking(
+                        Ingredient.of(ModItems.get(ModItemEnum.BEGGARS_RABBIT)),
+                        RecipeCategory.FOOD,
+                        ModItems.get(ModItemEnum.BEGGARS_RABBIT_COOKED),
+                        0.35F, 100)
+                .unlockedBy("has_beggars_rabbit", has(ModItems.get(ModItemEnum.BEGGARS_RABBIT)))
+                .save(output, ResourceLocation.fromNamespaceAndPath(DragonsDelight.MODID, "beggars_rabbit_cooked_from_smoking"));
     }
 
     private void buildCrafting(@NotNull RecipeOutput output) {

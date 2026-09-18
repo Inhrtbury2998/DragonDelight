@@ -24,6 +24,8 @@
   "item.dragonsdelight.volcanic_egg": "火山蛋",
   "item.dragonsdelight.red_heat_sandwich": "红热三明治",
   "item.dragonsdelight.beggars_rabbit": "叫花兔",
+  "item.dragonsdelight.beggars_rabbit_cooked": "熟叫花兔",
+  "block.dragonsdelight.cannot_eat": "你不能吃这个！",
   "item.dragonsdelight.grilled_cold_noodles": "烤冷面",
   "item.dragonsdelight.poisonous_potato_cookie": "毒薯曲奇",
   "item.dragonsdelight.meat_zongzi": "肉粽",
@@ -49,7 +51,13 @@
   "item.dragonsdelight.curing_human_meat_slice": "腌制人肉片",
 
   "block.dragonsdelight.plate": "盘子",
+  "block.dragonsdelight.roast_fish_with_gold_foil": "金箔烤鱼",
+  "block.dragonsdelight.feast_of_victory": "胜利之宴",
+  "block.dragonsdelight.moss_pie": "苔藓派",
+  "block.dragonsdelight.blossom_pie": "花果派",
+  "block.dragonsdelight.luminous_pie": "荧光派",
+  "block.dragonsdelight.beggars_rabbit": "叫花兔",
+  "block.dragonsdelight.beggars_rabbit_cooked": "熟叫花兔",
 
   "resourcepack.dragonsdelight.3d_model": "龙之乐事3D模型资源包"
-
 }

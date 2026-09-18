@@ -24,6 +24,8 @@
   "item.dragonsdelight.volcanic_egg": "Volcanic egg",
   "item.dragonsdelight.red_heat_sandwich": "Red heat sandwich",
   "item.dragonsdelight.beggars_rabbit": "Beggar\u2019s rabbit",
+  "item.dragonsdelight.beggars_rabbit_cooked": "Cooked beggar\u2019s rabbit",
+  "block.dragonsdelight.cannot_eat": "You cannot eat this!",
   "item.dragonsdelight.grilled_cold_noodles": "Grilled cold noodles",
   "item.dragonsdelight.poisonous_potato_cookie": "Poisonous potato cookie",
   "item.dragonsdelight.meat_zongzi": "Meat zongzi",
@@ -49,6 +51,13 @@
   "item.dragonsdelight.curing_human_meat_slice": "Pickled human meat slice",
 
   "block.dragonsdelight.plate": "Plate",
+  "block.dragonsdelight.roast_fish_with_gold_foil": "Roast fish with gold foil",
+  "block.dragonsdelight.feast_of_victory": "Feast of Victory",
+  "block.dragonsdelight.moss_pie": "Moss pie",
+  "block.dragonsdelight.blossom_pie": "Blossom pie",
+  "block.dragonsdelight.luminous_pie": "Luminous pie",
+  "block.dragonsdelight.beggars_rabbit": "Beggar\u2019s rabbit",
+  "block.dragonsdelight.beggars_rabbit_cooked": "Cooked beggar\u2019s rabbit",
 
   "resourcepack.dragonsdelight.3d_model": "Dragons Delight 3d model resourcepack"
 }

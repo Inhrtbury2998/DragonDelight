@@ -23,7 +23,11 @@ public class DataGenerators {
 
         // 物品模型
         generator.addProvider(event.includeClient(), new ModItemModelProvider(packOutput, existingFileHelper));
+        // 方块状态与方块物品模型
+        generator.addProvider(event.includeClient(), new ModBlockStateProvider(packOutput, existingFileHelper));
         // 配方
         generator.addProvider(event.includeServer(), new DragonsDelightRecipes(packOutput, lookupProvider));
+        // 龙种饮食数据（决定哪些龙可食用哪些食物）
+//        generator.addProvider(event.includeServer(), new DietEntryProvider(packOutput, lookupProvider));
     }
 }

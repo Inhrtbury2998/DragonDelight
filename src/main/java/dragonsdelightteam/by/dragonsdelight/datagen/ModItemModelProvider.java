@@ -18,16 +18,17 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         for (ModItemEnum itemEnum : ModItemEnum.values()) {
-            if (itemEnum == ModItemEnum.PLATE) {
-                // PLATE 是 BlockItem，其模型由方块状态生成器处理
+            String id = itemEnum.getId();
+            DeferredItem<Item> deferredItem = ModItems.get(itemEnum);
+            Item item = deferredItem.get();
+
+            // 方块物品（含 PLATE 与可放置食物方块）的模型由方块状态生成器处理
+            if (item instanceof net.minecraft.world.item.BlockItem) {
                 continue;
             }
 
-            String id = itemEnum.getId();
-            DeferredItem<Item> deferredItem = ModItems.get(itemEnum);
-
             // 生成普通物品模型：parent 为 item/generated，贴图为 items/<id>
-            basicItem(deferredItem.get());
+            basicItem(item);
         }
     }
 }
