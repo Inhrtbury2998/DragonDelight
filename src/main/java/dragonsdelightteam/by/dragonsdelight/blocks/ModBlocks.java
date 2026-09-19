@@ -42,7 +42,7 @@ public class ModBlocks {
             Set.of(BuiltInDragonSpecies.CAVE_DRAGON, BuiltInDragonSpecies.FOREST_DRAGON, BuiltInDragonSpecies.SEA_DRAGON);
 
     // 形状数组下标 = servings 数值，超出数组长度时复用最后一个。
-    // 这些形状同时用作方块选中框（描边）和碰撞箱。
+    // 这些形状同时用作方块选中框（描边）和碰撞箱，并以 facing=north 为基准编写，
 
     /** 烤鱼与胜利盛宴的模型含旋转元素，VoxelShape 只能轴对齐，故用随份数递减高度的粗略方框。 */
     private static final VoxelShape[] FEAST_SHAPES = new VoxelShape[]{

@@ -17,6 +17,7 @@ import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
@@ -26,10 +27,14 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.pathfinder.PathComputationType;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 
@@ -49,6 +54,7 @@ import java.util.function.Supplier;
  *     <li>当 {@code hasLeftovers} 为 {@code true} 且份数归零时，再次右键会移除方块并掉落
  *         {@code leftoverDrops}（盛装物与额外物品）。</li>
  *     <li>选中框与碰撞箱按份数取 {@code shapes} 中对应下标的形状，因此被吃掉的部分不再有体积。</li>
+ *     <li>方块随放置时玩家的水平朝向旋转（{@link #FACING}），形状与模型使用同一套旋转角，始终对齐。</li>
  * </ul>
  */
 public class DragonFeastBlock extends Block {
@@ -61,6 +67,9 @@ public class DragonFeastBlock extends Block {
      */
     public static final IntegerProperty SERVINGS = IntegerProperty.create("servings", 0, 4);
 
+    /** 水平朝向。取值与放置时玩家的水平朝向一致（参考 Farmer's Delight 的 PieBlock）。 */
+    public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
+
     /** 仅供 {@link #CODEC} 反序列化使用；实际注册的方块都会传入自己的形状。 */
     private static final VoxelShape[] DEFAULT_SHAPES = new VoxelShape[]{
             Block.box(2.0D, 0.0D, 2.0D, 14.0D, 4.0D, 14.0D)
@@ -69,8 +78,12 @@ public class DragonFeastBlock extends Block {
     private final Set<ResourceKey<DragonSpecies>> allowedSpecies;
     private final boolean hasLeftovers;
     private final Supplier<ItemStack[]> leftoverDrops;
-    /** 下标 = servings 数值；同时用于选中框与碰撞箱（方块描边取 {@code getShape}，碰撞默认复用同一形状）。 */
-    private final VoxelShape[] shapes;
+    /**
+     * 下标 = {@code [servings][}{@link Direction#get2DDataValue()}{@code ]}。
+     * 传入的 {@code shapes} 以 {@code facing=north} 为基准编写，此处预计算四个水平朝向的结果。
+     * 同时用于选中框与碰撞箱（方块描边取 {@code getShape}，碰撞默认复用同一形状）。
+     */
+    private final VoxelShape[][] shapes;
 
     /** 仅供 {@link #CODEC} 反序列化使用，实际注册的方块一律使用带参数的构造器。 */
     private DragonFeastBlock(BlockBehaviour.Properties properties) {
@@ -87,8 +100,10 @@ public class DragonFeastBlock extends Block {
         this.hasLeftovers = hasLeftovers;
         this.allowedSpecies = allowedSpecies;
         this.leftoverDrops = leftoverDrops;
-        this.shapes = shapes;
-        this.registerDefaultState(this.stateDefinition.any().setValue(SERVINGS, maxServings));
+        this.shapes = buildRotatedShapes(shapes);
+        this.registerDefaultState(this.stateDefinition.any()
+                .setValue(FACING, Direction.NORTH)
+                .setValue(SERVINGS, maxServings));
     }
 
     @Override
@@ -98,12 +113,86 @@ public class DragonFeastBlock extends Block {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(SERVINGS);
+        builder.add(FACING, SERVINGS);
+    }
+
+    @Override
+    public BlockState getStateForPlacement(BlockPlaceContext context) {
+        return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection());
     }
 
     @Override
     public @NotNull VoxelShape getShape(BlockState state, @NotNull BlockGetter level, @NotNull BlockPos pos, @NotNull CollisionContext context) {
-        return this.shapes[Math.min(state.getValue(SERVINGS), this.shapes.length - 1)];
+        VoxelShape[] byServings = this.shapes[Math.min(state.getValue(SERVINGS), this.shapes.length - 1)];
+        return byServings[state.getValue(FACING).get2DDataValue()];
+    }
+
+    /** 把以北方为基准的形状预计算成四个水平朝向的结果。 */
+    private static VoxelShape[][] buildRotatedShapes(final VoxelShape[] shapes) {
+        VoxelShape[][] rotated = new VoxelShape[shapes.length][4];
+
+        for (int servings = 0; servings < shapes.length; servings++) {
+            for (Direction facing : Direction.Plane.HORIZONTAL) {
+                rotated[servings][facing.get2DDataValue()] = rotateY(shapes[servings], quarterTurns(facing));
+            }
+        }
+
+        return rotated;
+    }
+
+    /**
+     * blockstate 的旋转角为 {@code (facing.toYRot() + 180) % 360}（与 {@code horizontalBlock} 一致），
+     * 换算成 90° 的整数倍即为形状需要旋转的圈数。
+     */
+    private static int quarterTurns(final Direction facing) {
+        return Math.floorMod((int) facing.toYRot() + 180, 360) / 90;
+    }
+
+    /**
+     * 把以北方为基准编写的形状绕 Y 轴旋转 {@code quarterTurns} 个 90°。
+     * 90° 旋转会把轴对齐的长方体映射为轴对齐的长方体，因此逐个 AABB 变换后求并集即为精确结果。
+     * <p>
+     * 注意 {@link AABB} 的坐标是 0~1，而 {@link Block#box} 接收的是 0~16 的像素值，
+     * 所以这里必须用 {@link Shapes#box}，否则形状会被再缩小 16 倍。
+     */
+    private static VoxelShape rotateY(final VoxelShape shape, final int quarterTurns) {
+        if (quarterTurns == 0) {
+            return shape;
+        }
+
+        VoxelShape rotated = Shapes.empty();
+
+        for (AABB box : shape.toAabbs()) {
+            double x1;
+            double x2;
+            double z1;
+            double z2;
+
+            switch (quarterTurns) {
+                case 1 -> {
+                    x1 = 1.0D - box.maxZ;
+                    x2 = 1.0D - box.minZ;
+                    z1 = box.minX;
+                    z2 = box.maxX;
+                }
+                case 2 -> {
+                    x1 = 1.0D - box.maxX;
+                    x2 = 1.0D - box.minX;
+                    z1 = 1.0D - box.maxZ;
+                    z2 = 1.0D - box.minZ;
+                }
+                default -> {
+                    x1 = box.minZ;
+                    x2 = box.maxZ;
+                    z1 = 1.0D - box.maxX;
+                    z2 = 1.0D - box.minX;
+                }
+            }
+
+            rotated = Shapes.or(rotated, Shapes.box(x1, box.minY, z1, x2, box.maxY, z2));
+        }
+
+        return rotated;
     }
 
     @Override
@@ -112,8 +201,8 @@ public class DragonFeastBlock extends Block {
     }
 
     @Override
-    public @NotNull BlockState updateShape(@NotNull BlockState state, @NotNull Direction facing, @NotNull BlockState facingState,
-                                           @NotNull LevelAccessor level, @NotNull BlockPos currentPos, @NotNull BlockPos facingPos) {
+    public @NotNull  BlockState updateShape(@NotNull BlockState state, @NotNull Direction facing, @NotNull BlockState facingState,
+                                  @NotNull LevelAccessor level, @NotNull BlockPos currentPos, @NotNull BlockPos facingPos) {
         return facing == Direction.DOWN && !state.canSurvive(level, currentPos)
                 ? Blocks.AIR.defaultBlockState()
                 : super.updateShape(state, facing, facingState, level, currentPos, facingPos);
@@ -136,7 +225,7 @@ public class DragonFeastBlock extends Block {
 
     @Override
     protected @NotNull ItemInteractionResult useItemOn(@NotNull ItemStack stack, @NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos,
-                                                       @NotNull Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult hitResult) {
+                                              @NotNull Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult hitResult) {
         return this.dragonUse(level, pos, state, player);
     }
 
@@ -154,6 +243,8 @@ public class DragonFeastBlock extends Block {
             }
             return ItemInteractionResult.FAIL;
         }
+
+        // 饱食度已满时不做任何反应（与原版蛋糕、农夫乐事的派一致）
         if (!player.canEat(false)) {
             return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
         }

@@ -2,15 +2,20 @@ package dragonsdelightteam.by.dragonsdelight.datagen;
 
 import dragonsdelightteam.by.dragonsdelight.DragonsDelight;
 import dragonsdelightteam.by.dragonsdelight.blocks.ModBlocks;
+import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 public class ModBlockStateProvider extends BlockStateProvider {
+
+    /** 与 {@code horizontalBlock} 一致：facing=north 对应 0°，即模型以北方为基准。 */
+    private static final int DEFAULT_ANGLE_OFFSET = 180;
 
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, DragonsDelight.MODID, exFileHelper);
@@ -56,7 +61,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 "beggars_rabbit"
         });
         feast(ModBlocks.BEGGARS_RABBIT_COOKED.get(), new String[]{
-                "beggars_rabbit_cooked_slice4beggars_rabbit_cooked_slice3.json",
+                "beggars_rabbit_cooked_slice4",
                 "beggars_rabbit_cooked_slice3",
                 "beggars_rabbit_cooked_slice2",
                 "beggars_rabbit_cooked_slice1",
@@ -66,17 +71,27 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     private void feast(Block block, String[] models) {
         IntegerProperty servings = (IntegerProperty) block.getStateDefinition().getProperty("servings");
+        DirectionProperty facing = (DirectionProperty) block.getStateDefinition().getProperty("facing");
         var builder = this.getVariantBuilder(block);
         // servings 属性取值范围固定为 0~4，必须覆盖全部状态；模型不足时复用最后一个模型。
         if (servings != null) {
             for (int s = 0; s < servings.getPossibleValues().size(); s++) {
-                builder.partialState()
-                        .with(servings, s)
-                        .modelForState()
-                        .modelFile(existingModel(models[Math.min(s, models.length - 1)]))
-                        .addModel();
+                ModelFile model = existingModel(models[Math.min(s, models.length - 1)]);
+                if (facing != null) {
+                    for (Direction direction : facing.getPossibleValues()) {
+                        builder.partialState()
+                                .with(servings, s)
+                                .with(facing, direction)
+                                .modelForState()
+                                .modelFile(model)
+                                // 与形状旋转保持一致：形状以 facing=north 为基准，模型同样按此角度旋转
+                                .rotationY(((int) direction.toYRot() + DEFAULT_ANGLE_OFFSET) % 360)
+                                .addModel();
+                    }
+                }
             }
         }
+        // BlockItem 模型：使用物品栏贴图（item/generated + item/<id>），而不是方块模型
         this.itemModels().basicItem(block.asItem());
     }
 
