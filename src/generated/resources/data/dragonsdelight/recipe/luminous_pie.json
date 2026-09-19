@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "d": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "g": {
+      "item": "minecraft:glow_berries"
+    },
+    "p": {
+      "item": "farmersdelight:pie_crust"
+    },
+    "s": {
+      "item": "dragonsdelight:seafood_sauce"
+    }
+  },
+  "pattern": [
+    "ddd",
+    "ggg",
+    "sps"
+  ],
+  "result": {
+    "count": 1,
+    "id": "dragonsdelight:luminous_pie"
+  }
+}

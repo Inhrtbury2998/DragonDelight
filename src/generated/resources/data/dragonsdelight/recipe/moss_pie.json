@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "g": {
+      "item": "minecraft:gold_nugget"
+    },
+    "h": {
+      "item": "minecraft:honey_bottle"
+    },
+    "m": {
+      "item": "minecraft:moss_block"
+    },
+    "p": {
+      "item": "farmersdelight:pie_crust"
+    }
+  },
+  "pattern": [
+    "mmm",
+    "ggg",
+    "hph"
+  ],
+  "result": {
+    "count": 1,
+    "id": "dragonsdelight:moss_pie"
+  }
+}

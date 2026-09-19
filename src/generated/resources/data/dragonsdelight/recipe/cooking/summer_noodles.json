@@ -1,0 +1,30 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "count": 1,
+    "id": "minecraft:bowl"
+  },
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "dragonsdelight:poisonous_potato_noodles"
+    },
+    {
+      "item": "minecraft:tropical_fish"
+    },
+    {
+      "item": "dragonsdelight:seafood_sauce"
+    },
+    {
+      "item": "minecraft:snowball"
+    },
+    {
+      "item": "minecraft:snowball"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "dragonsdelight:summer_noodles"
+  }
+}

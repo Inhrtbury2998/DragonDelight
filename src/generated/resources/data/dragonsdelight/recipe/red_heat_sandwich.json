@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:crimson_fungus"
+    },
+    {
+      "item": "minecraft:crimson_fungus"
+    },
+    {
+      "item": "dragonsurvival:charred_meat"
+    },
+    {
+      "item": "dragonsurvival:charred_vegetable"
+    },
+    {
+      "item": "dragonsurvival:charged_coal"
+    },
+    {
+      "item": "minecraft:iron_nugget"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "dragonsdelight:red_heat_sandwich"
+  }
+}

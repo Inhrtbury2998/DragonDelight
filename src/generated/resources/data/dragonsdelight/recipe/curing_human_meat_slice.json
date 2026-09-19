@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "dragonsdelight:human_flesh_slice"
+    },
+    [
+      {
+        "item": "minecraft:sugar"
+      },
+      {
+        "item": "minecraft:honey_bottle"
+      }
+    ],
+    {
+      "tag": "c:mushrooms"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "dragonsdelight:curing_human_meat_slice"
+  }
+}

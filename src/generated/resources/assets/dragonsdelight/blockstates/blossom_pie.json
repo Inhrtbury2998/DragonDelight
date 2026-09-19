@@ -1,0 +1,79 @@
+{
+  "variants": {
+    "facing=east,servings=0": {
+      "model": "dragonsdelight:block/blossom_pie_slice3",
+      "y": 90
+    },
+    "facing=east,servings=1": {
+      "model": "dragonsdelight:block/blossom_pie_slice2",
+      "y": 90
+    },
+    "facing=east,servings=2": {
+      "model": "dragonsdelight:block/blossom_pie_slice1",
+      "y": 90
+    },
+    "facing=east,servings=3": {
+      "model": "dragonsdelight:block/blossom_pie",
+      "y": 90
+    },
+    "facing=east,servings=4": {
+      "model": "dragonsdelight:block/blossom_pie",
+      "y": 90
+    },
+    "facing=north,servings=0": {
+      "model": "dragonsdelight:block/blossom_pie_slice3"
+    },
+    "facing=north,servings=1": {
+      "model": "dragonsdelight:block/blossom_pie_slice2"
+    },
+    "facing=north,servings=2": {
+      "model": "dragonsdelight:block/blossom_pie_slice1"
+    },
+    "facing=north,servings=3": {
+      "model": "dragonsdelight:block/blossom_pie"
+    },
+    "facing=north,servings=4": {
+      "model": "dragonsdelight:block/blossom_pie"
+    },
+    "facing=south,servings=0": {
+      "model": "dragonsdelight:block/blossom_pie_slice3",
+      "y": 180
+    },
+    "facing=south,servings=1": {
+      "model": "dragonsdelight:block/blossom_pie_slice2",
+      "y": 180
+    },
+    "facing=south,servings=2": {
+      "model": "dragonsdelight:block/blossom_pie_slice1",
+      "y": 180
+    },
+    "facing=south,servings=3": {
+      "model": "dragonsdelight:block/blossom_pie",
+      "y": 180
+    },
+    "facing=south,servings=4": {
+      "model": "dragonsdelight:block/blossom_pie",
+      "y": 180
+    },
+    "facing=west,servings=0": {
+      "model": "dragonsdelight:block/blossom_pie_slice3",
+      "y": 270
+    },
+    "facing=west,servings=1": {
+      "model": "dragonsdelight:block/blossom_pie_slice2",
+      "y": 270
+    },
+    "facing=west,servings=2": {
+      "model": "dragonsdelight:block/blossom_pie_slice1",
+      "y": 270
+    },
+    "facing=west,servings=3": {
+      "model": "dragonsdelight:block/blossom_pie",
+      "y": 270
+    },
+    "facing=west,servings=4": {
+      "model": "dragonsdelight:block/blossom_pie",
+      "y": 270
+    }
+  }
+}

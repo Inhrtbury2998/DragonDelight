@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dragonsdelight:pickled_human_meat_from_campfire_cooking"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "pickled_human_meat": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dragonsdelight:human_flesh"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "pickled_human_meat"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dragonsdelight:pickled_human_meat_from_campfire_cooking"
+    ]
+  }
+}

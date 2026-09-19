@@ -1,0 +1,38 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "count": 1,
+    "id": "minecraft:bowl"
+  },
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "dragonsdelight:poisonous_potato_noodles"
+    },
+    {
+      "item": "minecraft:rotten_flesh"
+    },
+    {
+      "item": "minecraft:dried_kelp"
+    },
+    {
+      "type": "neoforge:compound",
+      "children": [
+        {
+          "item": "minecraft:prismarine_shard"
+        },
+        {
+          "item": "minecraft:prismarine_crystals"
+        }
+      ]
+    },
+    {
+      "item": "minecraft:bone_meal"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "dragonsdelight:relic_noodles"
+  }
+}

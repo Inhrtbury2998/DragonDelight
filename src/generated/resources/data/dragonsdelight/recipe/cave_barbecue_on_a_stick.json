@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:blaze_rod"
+    },
+    {
+      "item": "minecraft:glow_berries"
+    },
+    {
+      "item": "dragonsdelight:human_flesh"
+    },
+    {
+      "item": "minecraft:spider_eye"
+    },
+    {
+      "tag": "c:foods/raw_meat"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "dragonsdelight:cave_barbecue_on_a_stick"
+  }
+}

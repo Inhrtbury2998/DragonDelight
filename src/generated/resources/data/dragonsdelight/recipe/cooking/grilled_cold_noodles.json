@@ -1,0 +1,27 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "count": 1,
+    "id": "minecraft:bowl"
+  },
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "dragonsdelight:mashed_poisonous_potato"
+    },
+    {
+      "item": "dragonsurvival:charred_vegetable"
+    },
+    {
+      "item": "minecraft:fermented_spider_eye"
+    },
+    {
+      "tag": "c:crops/onion"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "dragonsdelight:grilled_cold_noodles"
+  }
+}

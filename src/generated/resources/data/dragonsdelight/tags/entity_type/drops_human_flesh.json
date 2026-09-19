@@ -1,0 +1,11 @@
+{
+  "values": [
+    "minecraft:villager",
+    "minecraft:wandering_trader",
+    "#minecraft:illager",
+    "dragonsurvival:hunter_spearman",
+    "dragonsurvival:hunter_knight",
+    "dragonsurvival:hunter_ambusher",
+    "dragonsurvival:hunter_leader"
+  ]
+}

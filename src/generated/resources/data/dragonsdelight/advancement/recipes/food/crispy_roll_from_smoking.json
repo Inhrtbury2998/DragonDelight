@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_fish_roll": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dragonsdelight:fish_roll"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dragonsdelight:crispy_roll_from_smoking"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_fish_roll"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dragonsdelight:crispy_roll_from_smoking"
+    ]
+  }
+}

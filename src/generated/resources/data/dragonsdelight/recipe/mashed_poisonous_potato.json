@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "dragonsdelight:shredded_poisonous_potato"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "dragonsdelight:mashed_poisonous_potato"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "tag": "c:foods/berry"
+    },
+    "f": {
+      "tag": "minecraft:flowers"
+    },
+    "p": {
+      "item": "farmersdelight:pie_crust"
+    }
+  },
+  "pattern": [
+    "fff",
+    "bfb",
+    "bpb"
+  ],
+  "result": {
+    "count": 1,
+    "id": "dragonsdelight:blossom_pie"
+  }
+}

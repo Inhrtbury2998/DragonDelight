@@ -1,0 +1,20 @@
+{
+  "type": "farmersdelight:cooking",
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "minecraft:turtle_egg"
+    },
+    {
+      "tag": "c:crops/onion"
+    },
+    {
+      "item": "dragonsdelight:luminous_sauce"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "dragonsdelight:turtle_egg_custard"
+  }
+}

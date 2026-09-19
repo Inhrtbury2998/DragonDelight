@@ -1,0 +1,851 @@
+{
+  "values": {
+    "dragonsurvival:cave_dragon": {
+      "neoforge:conditions": [
+        {
+          "type": "dragonsurvival:registered",
+          "registry": "dragonsurvival:dragon_species",
+          "value": "dragonsurvival:cave_dragon"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "items": "dragonsdelight:roast_fish_with_gold_foil",
+          "properties": {
+            "effects": [
+              {
+                "effect": {
+                  "amplifier": 1,
+                  "duration": 3600,
+                  "id": "dragonsurvival:hunter_omen",
+                  "show_icon": true
+                }
+              }
+            ],
+            "nutrition": 8,
+            "saturation": 10.0
+          }
+        },
+        {
+          "items": "dragonsdelight:feast_of_victory",
+          "properties": {
+            "nutrition": 10,
+            "saturation": 16.0
+          }
+        },
+        {
+          "items": "dragonsdelight:human_flesh",
+          "properties": {
+            "nutrition": 4,
+            "saturation": 1.2
+          }
+        },
+        {
+          "items": "dragonsdelight:human_flesh_slice",
+          "properties": {
+            "nutrition": 2,
+            "saturation": 0.6
+          }
+        },
+        {
+          "items": "dragonsdelight:curing_human_meat",
+          "properties": {
+            "nutrition": 6,
+            "saturation": 9.0
+          }
+        },
+        {
+          "items": "dragonsdelight:curing_human_meat_slice",
+          "properties": {
+            "nutrition": 3,
+            "saturation": 4.5
+          }
+        },
+        {
+          "items": "dragonsdelight:ore_sauce",
+          "properties": {
+            "nutrition": 2,
+            "saturation": 1.0
+          }
+        },
+        {
+          "items": "dragonsdelight:lava_drink",
+          "properties": {
+            "effects": [
+              {
+                "effect": {
+                  "duration": 1800,
+                  "id": "dragonsurvival:cave_fire",
+                  "neoforge:cures": [
+                    "milk",
+                    "protected_by_totem"
+                  ],
+                  "show_icon": true
+                }
+              }
+            ],
+            "nutrition": 2,
+            "saturation": 4.0
+          }
+        },
+        {
+          "items": "dragonsdelight:cave_soup",
+          "properties": {
+            "effects": [
+              {
+                "effect": {
+                  "duration": 1200,
+                  "id": "minecraft:regeneration",
+                  "neoforge:cures": [
+                    "milk",
+                    "protected_by_totem"
+                  ],
+                  "show_icon": true
+                }
+              }
+            ],
+            "nutrition": 10,
+            "saturation": 14.0
+          }
+        },
+        {
+          "items": "dragonsdelight:ember_noodles",
+          "properties": {
+            "effects": [
+              {
+                "effect": {
+                  "duration": 6000,
+                  "id": "farmersdelight:nourishment",
+                  "neoforge:cures": [
+                    "milk",
+                    "protected_by_totem"
+                  ],
+                  "show_icon": true
+                }
+              },
+              {
+                "effect": {
+                  "duration": 3600,
+                  "id": "dragonsurvival:cave_fire",
+                  "neoforge:cures": [
+                    "milk",
+                    "protected_by_totem"
+                  ],
+                  "show_icon": true
+                }
+              }
+            ],
+            "nutrition": 12,
+            "saturation": 19.2
+          }
+        },
+        {
+          "items": "dragonsdelight:ore_noodles",
+          "properties": {
+            "effects": [
+              {
+                "effect": {
+                  "duration": 6000,
+                  "id": "farmersdelight:nourishment",
+                  "neoforge:cures": [
+                    "milk",
+                    "protected_by_totem"
+                  ],
+                  "show_icon": true
+                }
+              },
+              {
+                "effect": {
+                  "duration": 2400,
+                  "id": "minecraft:haste",
+                  "neoforge:cures": [
+                    "milk",
+                    "protected_by_totem"
+                  ],
+                  "show_icon": true
+                }
+              }
+            ],
+            "nutrition": 12,
+            "saturation": 19.2
+          }
+        },
+        {
+          "items": "dragonsdelight:cave_barbecue_on_a_stick",
+          "properties": {
+            "nutrition": 8,
+            "saturation": 15.0
+          }
+        },
+        {
+          "items": "dragonsdelight:volcanic_egg",
+          "properties": {
+            "effects": [
+              {
+                "effect": {
+                  "duration": 6000,
+                  "id": "farmersdelight:nourishment",
+                  "neoforge:cures": [
+                    "milk",
+                    "protected_by_totem"
+                  ],
+                  "show_icon": true
+                }
+              },
+              {
+                "effect": {
+                  "duration": 2400,
+                  "id": "dragonsurvival:cave_fire",
+                  "neoforge:cures": [
+                    "milk",
+                    "protected_by_totem"
+                  ],
+                  "show_icon": true
+                }
+              }
+            ],
+            "nutrition": 10,
+            "saturation": 16.0
+          }
+        },
+        {
+          "items": "dragonsdelight:red_heat_sandwich",
+          "properties": {
+            "nutrition": 10,
+            "saturation": 16.0
+          }
+        },
+        {
+          "items": "dragonsdelight:beggars_rabbit_cooked",
+          "properties": {
+            "nutrition": 12,
+            "saturation": 19.2
+          }
+        },
+        {
+          "items": "dragonsdelight:crispy_roll",
+          "properties": {
+            "nutrition": 10,
+            "saturation": 16.0
+          }
+        }
+      ]
+    },
+    "dragonsurvival:forest_dragon": {
+      "neoforge:conditions": [
+        {
+          "type": "dragonsurvival:registered",
+          "registry": "dragonsurvival:dragon_species",
+          "value": "dragonsurvival:forest_dragon"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "items": "dragonsdelight:roast_fish_with_gold_foil",
+          "properties": {
+            "effects": [
+              {
+                "effect": {
+                  "amplifier": 1,
+                  "duration": 3600,
+                  "id": "dragonsurvival:hunter_omen",
+                  "show_icon": true
+                }
+              }
+            ],
+            "nutrition": 8,
+            "saturation": 10.0
+          }
+        },
+        {
+          "items": "dragonsdelight:feast_of_victory",
+          "properties": {
+            "nutrition": 10,
+            "saturation": 16.0
+          }
+        },
+        {
+          "items": "dragonsdelight:human_flesh",
+          "properties": {
+            "nutrition": 4,
+            "saturation": 1.2
+          }
+        },
+        {
+          "items": "dragonsdelight:human_flesh_slice",
+          "properties": {
+            "nutrition": 2,
+            "saturation": 0.6
+          }
+        },
+        {
+          "items": "dragonsdelight:curing_human_meat",
+          "properties": {
+            "nutrition": 6,
+            "saturation": 9.0
+          }
+        },
+        {
+          "items": "dragonsdelight:curing_human_meat_slice",
+          "properties": {
+            "nutrition": 3,
+            "saturation": 4.5
+          }
+        },
+        {
+          "items": "dragonsdelight:luminous_sauce",
+          "properties": {
+            "nutrition": 2,
+            "saturation": 1.0
+          }
+        },
+        {
+          "items": "dragonsdelight:lush_noodles",
+          "properties": {
+            "effects": [
+              {
+                "effect": {
+                  "duration": 6000,
+                  "id": "farmersdelight:nourishment",
+                  "neoforge:cures": [
+                    "milk",
+                    "protected_by_totem"
+                  ],
+                  "show_icon": true
+                }
+              }
+            ],
+            "nutrition": 10,
+            "saturation": 16.0
+          }
+        },
+        {
+          "items": "dragonsdelight:moss_pie",
+          "properties": {
+            "effects": [
+              {
+                "effect": {
+                  "duration": 600,
+                  "id": "minecraft:speed",
+                  "neoforge:cures": [
+                    "milk",
+                    "protected_by_totem"
+                  ],
+                  "show_icon": true
+                }
+              }
+            ],
+            "nutrition": 8,
+            "saturation": 15.0
+          }
+        },
+        {
+          "items": "dragonsdelight:slice_of_moss_pie",
+          "properties": {
+            "effects": [
+              {
+                "effect": {
+                  "duration": 600,
+                  "id": "minecraft:speed",
+                  "neoforge:cures": [
+                    "milk",
+                    "protected_by_totem"
+                  ],
+                  "show_icon": true
+                }
+              }
+            ],
+            "nutrition": 3,
+            "saturation": 1.8
+          }
+        },
+        {
+          "items": "dragonsdelight:blossom_pie",
+          "properties": {
+            "effects": [
+              {
+                "effect": {
+                  "duration": 600,
+                  "id": "minecraft:speed",
+                  "neoforge:cures": [
+                    "milk",
+                    "protected_by_totem"
+                  ],
+                  "show_icon": true
+                }
+              }
+            ],
+            "nutrition": 3,
+            "saturation": 1.8
+          }
+        },
+        {
+          "items": "dragonsdelight:slice_of_blossom_pie",
+          "properties": {
+            "effects": [
+              {
+                "effect": {
+                  "duration": 600,
+                  "id": "minecraft:speed",
+                  "neoforge:cures": [
+                    "milk",
+                    "protected_by_totem"
+                  ],
+                  "show_icon": true
+                }
+              }
+            ],
+            "nutrition": 3,
+            "saturation": 1.8
+          }
+        },
+        {
+          "items": "dragonsdelight:beggars_rabbit",
+          "properties": {
+            "effects": [
+              {
+                "effect": {
+                  "duration": 3600,
+                  "id": "farmersdelight:nourishment",
+                  "neoforge:cures": [
+                    "milk",
+                    "protected_by_totem"
+                  ],
+                  "show_icon": true
+                }
+              }
+            ],
+            "nutrition": 12,
+            "saturation": 19.2
+          }
+        },
+        {
+          "items": "dragonsdelight:poisonous_potato_cookie",
+          "properties": {
+            "nutrition": 2,
+            "saturation": 0.6
+          }
+        },
+        {
+          "items": "dragonsdelight:meat_zongzi",
+          "properties": {
+            "nutrition": 8,
+            "saturation": 12.8
+          }
+        },
+        {
+          "items": "dragonsdelight:jungle_salad",
+          "properties": {
+            "effects": [
+              {
+                "effect": {
+                  "amplifier": 1,
+                  "duration": 100,
+                  "id": "minecraft:regeneration",
+                  "neoforge:cures": [
+                    "milk",
+                    "protected_by_totem"
+                  ],
+                  "show_icon": true
+                }
+              }
+            ],
+            "nutrition": 6,
+            "saturation": 7.2
+          }
+        },
+        {
+          "items": "dragonsdelight:grass_mashed_potatoes",
+          "properties": {
+            "effects": [
+              {
+                "effect": {
+                  "duration": 1200,
+                  "id": "farmersdelight:nourishment",
+                  "neoforge:cures": [
+                    "milk",
+                    "protected_by_totem"
+                  ],
+                  "show_icon": true
+                }
+              }
+            ],
+            "nutrition": 10,
+            "saturation": 12.0
+          }
+        },
+        {
+          "items": "dragonsdelight:shredded_poisonous_potato",
+          "properties": {
+            "nutrition": 2,
+            "saturation": 0.6
+          }
+        },
+        {
+          "items": "dragonsdelight:mashed_poisonous_potato",
+          "properties": {
+            "nutrition": 2,
+            "saturation": 0.6
+          }
+        },
+        {
+          "items": "dragonsdelight:poisonous_potato_noodles",
+          "properties": {
+            "nutrition": 2,
+            "saturation": 1.0
+          }
+        },
+        {
+          "items": "dragonsdelight:luminous_pie",
+          "properties": {
+            "effects": [
+              {
+                "effect": {
+                  "duration": 600,
+                  "id": "minecraft:speed",
+                  "neoforge:cures": [
+                    "milk",
+                    "protected_by_totem"
+                  ],
+                  "show_icon": true
+                }
+              }
+            ],
+            "nutrition": 3,
+            "saturation": 1.8
+          }
+        },
+        {
+          "items": "dragonsdelight:slice_of_luminous_pie",
+          "properties": {
+            "effects": [
+              {
+                "effect": {
+                  "duration": 600,
+                  "id": "minecraft:speed",
+                  "neoforge:cures": [
+                    "milk",
+                    "protected_by_totem"
+                  ],
+                  "show_icon": true
+                }
+              }
+            ],
+            "nutrition": 3,
+            "saturation": 1.8
+          }
+        },
+        {
+          "items": "dragonsdelight:beggars_rabbit_cooked",
+          "properties": {
+            "nutrition": 12,
+            "saturation": 19.2
+          }
+        }
+      ]
+    },
+    "dragonsurvival:sea_dragon": {
+      "neoforge:conditions": [
+        {
+          "type": "dragonsurvival:registered",
+          "registry": "dragonsurvival:dragon_species",
+          "value": "dragonsurvival:sea_dragon"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "items": "dragonsdelight:roast_fish_with_gold_foil",
+          "properties": {
+            "effects": [
+              {
+                "effect": {
+                  "amplifier": 1,
+                  "duration": 3600,
+                  "id": "dragonsurvival:hunter_omen",
+                  "show_icon": true
+                }
+              }
+            ],
+            "nutrition": 8,
+            "saturation": 10.0
+          }
+        },
+        {
+          "items": "dragonsdelight:feast_of_victory",
+          "properties": {
+            "nutrition": 10,
+            "saturation": 16.0
+          }
+        },
+        {
+          "items": "dragonsdelight:human_flesh",
+          "properties": {
+            "nutrition": 4,
+            "saturation": 1.2
+          }
+        },
+        {
+          "items": "dragonsdelight:human_flesh_slice",
+          "properties": {
+            "nutrition": 2,
+            "saturation": 0.6
+          }
+        },
+        {
+          "items": "dragonsdelight:curing_human_meat",
+          "properties": {
+            "nutrition": 6,
+            "saturation": 9.0
+          }
+        },
+        {
+          "items": "dragonsdelight:curing_human_meat_slice",
+          "properties": {
+            "nutrition": 3,
+            "saturation": 4.5
+          }
+        },
+        {
+          "items": "dragonsdelight:bisque_noodles",
+          "properties": {
+            "effects": [
+              {
+                "effect": {
+                  "duration": 6000,
+                  "id": "farmersdelight:nourishment",
+                  "neoforge:cures": [
+                    "milk",
+                    "protected_by_totem"
+                  ],
+                  "show_icon": true
+                }
+              }
+            ],
+            "nutrition": 12,
+            "saturation": 19.2
+          }
+        },
+        {
+          "items": "dragonsdelight:relic_noodles",
+          "properties": {
+            "effects": [
+              {
+                "effect": {
+                  "duration": 6000,
+                  "id": "farmersdelight:nourishment",
+                  "neoforge:cures": [
+                    "milk",
+                    "protected_by_totem"
+                  ],
+                  "show_icon": true
+                }
+              }
+            ],
+            "nutrition": 12,
+            "saturation": 19.2
+          }
+        },
+        {
+          "items": "dragonsdelight:wetland_noodles",
+          "properties": {
+            "effects": [
+              {
+                "effect": {
+                  "duration": 6000,
+                  "id": "farmersdelight:nourishment",
+                  "neoforge:cures": [
+                    "milk",
+                    "protected_by_totem"
+                  ],
+                  "show_icon": true
+                }
+              }
+            ],
+            "nutrition": 10,
+            "saturation": 16.0
+          }
+        },
+        {
+          "items": "dragonsdelight:summer_noodles",
+          "properties": {
+            "effects": [
+              {
+                "effect": {
+                  "duration": 6000,
+                  "id": "farmersdelight:nourishment",
+                  "neoforge:cures": [
+                    "milk",
+                    "protected_by_totem"
+                  ],
+                  "show_icon": true
+                }
+              },
+              {
+                "effect": {
+                  "duration": 1200,
+                  "id": "minecraft:regeneration",
+                  "neoforge:cures": [
+                    "milk",
+                    "protected_by_totem"
+                  ],
+                  "show_icon": true
+                }
+              }
+            ],
+            "nutrition": 10,
+            "saturation": 16.0
+          }
+        },
+        {
+          "items": "dragonsdelight:grilled_cold_noodles",
+          "properties": {
+            "effects": [
+              {
+                "effect": {
+                  "duration": 3600,
+                  "id": "farmersdelight:nourishment",
+                  "neoforge:cures": [
+                    "milk",
+                    "protected_by_totem"
+                  ],
+                  "show_icon": true
+                }
+              }
+            ],
+            "nutrition": 14,
+            "saturation": 21.0
+          }
+        },
+        {
+          "items": "dragonsdelight:fish_roll",
+          "properties": {
+            "nutrition": 8,
+            "saturation": 12.8
+          }
+        },
+        {
+          "items": "dragonsdelight:turtle_egg_custard",
+          "properties": {
+            "effects": [
+              {
+                "effect": {
+                  "amplifier": 1,
+                  "duration": 1200,
+                  "id": "minecraft:regeneration",
+                  "neoforge:cures": [
+                    "milk",
+                    "protected_by_totem"
+                  ],
+                  "show_icon": true
+                }
+              }
+            ],
+            "nutrition": 5,
+            "saturation": 5.0
+          }
+        },
+        {
+          "items": "dragonsdelight:inky_fish_aspic",
+          "properties": {
+            "effects": [
+              {
+                "effect": {
+                  "duration": 3600,
+                  "id": "farmersdelight:nourishment",
+                  "neoforge:cures": [
+                    "milk",
+                    "protected_by_totem"
+                  ],
+                  "show_icon": true
+                }
+              }
+            ],
+            "nutrition": 14,
+            "saturation": 21.0
+          }
+        },
+        {
+          "items": "dragonsdelight:seafood_sauce",
+          "properties": {
+            "nutrition": 4,
+            "saturation": 4.0
+          }
+        },
+        {
+          "items": "dragonsdelight:coral_chew_bar",
+          "properties": {
+            "effects": [
+              {
+                "effect": {
+                  "duration": 6000,
+                  "id": "minecraft:haste",
+                  "neoforge:cures": [
+                    "milk",
+                    "protected_by_totem"
+                  ],
+                  "show_icon": true
+                }
+              }
+            ],
+            "nutrition": 5,
+            "saturation": 5.0
+          }
+        },
+        {
+          "items": "dragonsdelight:spring_fish",
+          "properties": {
+            "nutrition": 8,
+            "saturation": 12.8
+          }
+        },
+        {
+          "items": "dragonsdelight:luminous_pie",
+          "properties": {
+            "effects": [
+              {
+                "effect": {
+                  "duration": 600,
+                  "id": "minecraft:speed",
+                  "neoforge:cures": [
+                    "milk",
+                    "protected_by_totem"
+                  ],
+                  "show_icon": true
+                }
+              }
+            ],
+            "nutrition": 3,
+            "saturation": 1.8
+          }
+        },
+        {
+          "items": "dragonsdelight:slice_of_luminous_pie",
+          "properties": {
+            "effects": [
+              {
+                "effect": {
+                  "duration": 600,
+                  "id": "minecraft:speed",
+                  "neoforge:cures": [
+                    "milk",
+                    "protected_by_totem"
+                  ],
+                  "show_icon": true
+                }
+              }
+            ],
+            "nutrition": 3,
+            "saturation": 1.8
+          }
+        },
+        {
+          "items": "dragonsdelight:crispy_roll",
+          "properties": {
+            "nutrition": 10,
+            "saturation": 16.0
+          }
+        }
+      ]
+    }
+  }
+}

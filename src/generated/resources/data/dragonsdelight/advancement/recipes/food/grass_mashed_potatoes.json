@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mashed_poisonous_potato": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dragonsdelight:mashed_poisonous_potato"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dragonsdelight:grass_mashed_potatoes"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_mashed_poisonous_potato"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dragonsdelight:grass_mashed_potatoes"
+    ]
+  }
+}

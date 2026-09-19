@@ -1,0 +1,41 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "count": 1,
+    "id": "minecraft:bowl"
+  },
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "dragonsdelight:poisonous_potato_noodles"
+    },
+    {
+      "item": "minecraft:gunpowder"
+    },
+    {
+      "type": "neoforge:compound",
+      "children": [
+        {
+          "item": "dragonsurvival:charred_meat"
+        },
+        {
+          "item": "dragonsurvival:charred_vegetable"
+        },
+        {
+          "item": "dragonsurvival:charred_mushroom"
+        },
+        {
+          "item": "dragonsurvival:charred_seafood"
+        }
+      ]
+    },
+    {
+      "item": "minecraft:charcoal"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "dragonsdelight:ember_noodles"
+  }
+}
