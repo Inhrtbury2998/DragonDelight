@@ -1,0 +1,21 @@
+{
+  "textures": {
+    "0": "dragonsdelight:item/beggars_rabbit_cooked",
+    "particle": "dragonsdelight:item/beggars_rabbit_cooked"
+  },
+  "elements": [
+    {
+      "from": [3, 0, 3],
+      "to": [13, 3, 13],
+      "faces": {
+        "north": {"uv": [3, 13, 13, 16], "texture": "#0"},
+        "east": {"uv": [3, 13, 13, 16], "texture": "#0"},
+        "south": {"uv": [3, 13, 13, 16], "texture": "#0"},
+        "west": {"uv": [3, 13, 13, 16], "texture": "#0"},
+        "up": {"uv": [0, 0, 16, 16], "texture": "#0"},
+        "down": {"uv": [0, 0, 16, 16], "texture": "#0", "cullface": "down"}
+      }
+    }
+  ],
+  "render_type": "cutout"
+}
