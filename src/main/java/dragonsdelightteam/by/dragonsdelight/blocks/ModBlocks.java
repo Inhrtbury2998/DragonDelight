@@ -44,13 +44,24 @@ public class ModBlocks {
     // 形状数组下标 = servings 数值，超出数组长度时复用最后一个。
     // 这些形状同时用作方块选中框（描边）和碰撞箱，并以 facing=north 为基准编写，
 
-    /** 烤鱼与胜利盛宴的模型含旋转元素，VoxelShape 只能轴对齐，故用随份数递减高度的粗略方框。 */
-    private static final VoxelShape[] FEAST_SHAPES = new VoxelShape[]{
-            Block.box(2, 0, 2, 14, 2, 14),
-            Block.box(2, 0, 2, 14, 4, 14),
-            Block.box(2, 0, 2, 14, 6, 14),
-            Block.box(2, 0, 2, 14, 8, 14),
-            Block.box(2, 0, 2, 14, 8, 14)
+    /**
+     * 金箔烤鱼：只取模型中的非旋转元素（旋转元素视为不存在），故仅剩托盘、鱼尾与随份数缩小的底部食材。
+     * 零厚度（退化）元素没有体积，略去不影响碰撞箱与选中框。下标 = servings 数值。
+     */
+    private static final VoxelShape ROAST_FISH_TRAY = Block.box(1, 0, 1, 15, 1, 15);
+    private static final VoxelShape ROAST_FISH_TAIL = Block.box(3.25, 1, 11.5, 8.25, 5, 13.5);
+
+    private static final VoxelShape[] ROAST_FISH_SHAPES = new VoxelShape[]{
+            ROAST_FISH_TRAY,
+            Shapes.or(ROAST_FISH_TRAY, ROAST_FISH_TAIL, Block.box(7, 0.5, 6, 12, 2.5, 12)),
+            Shapes.or(ROAST_FISH_TRAY, ROAST_FISH_TAIL, Block.box(5, 0.5, 6, 12, 2.5, 12)),
+            Shapes.or(ROAST_FISH_TRAY, ROAST_FISH_TAIL, Block.box(5, 0.5, 4, 12, 2.5, 12)),
+            Shapes.or(ROAST_FISH_TRAY, ROAST_FISH_TAIL, Block.box(4, 0.5, 4, 12, 2.5, 12))
+    };
+
+    /** 胜利之宴：各份数下的非旋转元素完全相同（头盔造型），故所有份数共用一个方框。 */
+    private static final VoxelShape[] FEAST_OF_VICTORY_SHAPES = new VoxelShape[]{
+            Block.box(2.5, 0, 2.5, 13.5, 10, 13.5)
     };
 
     /** 派类模板 template_pie*：整派 2~14 见方、高 4，每吃一份少掉四分之一。 */
@@ -92,7 +103,7 @@ public class ModBlocks {
                             new ItemStack(Items.GOLD_INGOT),
                             new ItemStack(Items.BONE),
                             new ItemStack(Items.GOLD_NUGGET)
-                    }, FEAST_SHAPES));
+                    }, ROAST_FISH_SHAPES));
 
     public static final DeferredBlock<DragonFeastBlock> FEAST_OF_VICTORY =
             BLOCKS.register("feast_of_victory", () -> new DragonFeastBlock(foodProperties(),
@@ -100,7 +111,7 @@ public class ModBlocks {
                     () -> new ItemStack[]{
                             new ItemStack(DSBlocks.GOLDEN_KNIGHT_HELMET.value()),
                             new ItemStack(Items.GOLD_NUGGET)
-                    }, FEAST_SHAPES));
+                    }, FEAST_OF_VICTORY_SHAPES));
 
     public static final DeferredBlock<DragonFeastBlock> MOSS_PIE =
             BLOCKS.register("moss_pie", () -> new DragonFeastBlock(foodProperties(),
