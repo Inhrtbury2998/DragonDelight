@@ -24,6 +24,7 @@ public class CookingRecipes {
         cookNoodles(output);
         cookMeals(output);
         cookMiscellaneous(output);
+        cookSauce(output);
     }
 
     private static void cookNoodles(RecipeOutput output) {
@@ -121,6 +122,35 @@ public class CookingRecipes {
                 .addIngredient(CommonTags.Items.CROPS_ONION)
                 .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
                 .unlockedByAnyIngredient(ModItems.get(ModItemEnum.MASHED_POISONOUS_POTATO))
+                .save(output);
+    }
+    private static void cookSauce(RecipeOutput output) {
+        // 矿石酱
+        CookingPotRecipeBuilder.cookingPotRecipe(ModItems.get(ModItemEnum.ORE_SAUCE), 1, NORMAL_COOKING, MEDIUM_EXP, Items.BOWL)
+                .addIngredient(Items.GOLD_NUGGET)
+                .addIngredient(Items.REDSTONE)
+                .addIngredient(Items.LAPIS_LAZULI)
+                .addIngredient(DSItems.ELDER_DRAGON_DUST.value())
+                .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
+                .unlockedByAnyIngredient(DSItems.ELDER_DRAGON_DUST.value())
+                .save(output);
+
+        // 荧光酱
+        CookingPotRecipeBuilder.cookingPotRecipe(ModItems.get(ModItemEnum.LUMINOUS_SAUCE), 1, NORMAL_COOKING, MEDIUM_EXP, Items.BOWL)
+                .addIngredient(Items.GLOW_INK_SAC)
+                .addIngredient(Items.SUGAR)
+                .addIngredient(Items.NETHER_WART)
+                .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
+                .unlockedByAnyIngredient(Items.NETHER_WART)
+                .save(output);
+
+        // 海鲜酱
+        CookingPotRecipeBuilder.cookingPotRecipe(ModItems.get(ModItemEnum.SEAFOOD_SAUCE), 1, NORMAL_COOKING, MEDIUM_EXP, Items.BOWL)
+                .addIngredient(Items.INK_SAC)
+                .addIngredient(Tags.Items.FOODS_RAW_FISH)
+                .addIngredient(Ingredient.of(Items.KELP, Items.SEA_PICKLE))
+                .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
+                .unlockedByAnyIngredient(Items.INK_SAC)
                 .save(output);
     }
 

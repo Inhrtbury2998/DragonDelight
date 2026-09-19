@@ -245,34 +245,6 @@ public class DragonsDelightRecipes extends RecipeProvider {
                 .requires(Items.WATER_BUCKET)
                 .unlockedBy("has_mashed_poisonous_potato", has(ModItems.get(ModItemEnum.MASHED_POISONOUS_POTATO)))
                 .save(output);
-
-        // 矿石酱
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.get(ModItemEnum.ORE_SAUCE), 1)
-                .requires(Items.GOLD_NUGGET)
-                .requires(Items.REDSTONE)
-                .requires(Items.LAPIS_LAZULI)
-                .requires(DSItems.ELDER_DRAGON_DUST.value())
-                .requires(Items.BOWL)
-                .unlockedBy("has_elder_dragon_dust", has(DSItems.ELDER_DRAGON_DUST.value()))
-                .save(output, ResourceLocation.fromNamespaceAndPath(DragonsDelight.MODID, "ore_sauce"));
-
-        // 荧光酱 - 无序合成
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.get(ModItemEnum.LUMINOUS_SAUCE), 1)
-                .requires(Items.GLOW_INK_SAC)
-                .requires(Items.SUGAR)
-                .requires(Items.NETHER_WART)
-                .requires(Items.BOWL)
-                .unlockedBy("has_nether_wart", has(Items.NETHER_WART))
-                .save(output, ResourceLocation.fromNamespaceAndPath(DragonsDelight.MODID, "luminous_sauce"));
-
-        // 海鲜酱 - 无序合成（使用海带）
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.get(ModItemEnum.SEAFOOD_SAUCE), 1)
-                .requires(Items.INK_SAC)
-                .requires(Tags.Items.FOODS_RAW_FISH)
-                .requires(Ingredient.of(Items.KELP, Items.SEA_PICKLE))
-                .requires(Items.BOWL)
-                .unlockedBy("has_ink_sac", has(Items.INK_SAC))
-                .save(output, ResourceLocation.fromNamespaceAndPath(DragonsDelight.MODID, "seafood_sauce_kelp"));
     }
 
     private void buildCutting(@NotNull RecipeOutput output) {
