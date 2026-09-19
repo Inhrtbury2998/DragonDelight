@@ -1,6 +1,8 @@
 package dragonsdelightteam.by.dragonsdelight.datagen;
 
 import dragonsdelightteam.by.dragonsdelight.DragonsDelight;
+import dragonsdelightteam.by.dragonsdelight.datagen.data_maps.DietEntryProvider;
+import dragonsdelightteam.by.dragonsdelight.datagen.tags.DragonsDelightEntityTypeTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -27,7 +29,9 @@ public class DataGenerators {
         generator.addProvider(event.includeClient(), new ModBlockStateProvider(packOutput, existingFileHelper));
         // 配方
         generator.addProvider(event.includeServer(), new DragonsDelightRecipes(packOutput, lookupProvider));
-        // 龙种饮食数据（决定哪些龙可食用哪些食物）
-//        generator.addProvider(event.includeServer(), new DietEntryProvider(packOutput, lookupProvider));
+        // 龙食数据
+        generator.addProvider(event.includeServer(), new DietEntryProvider(packOutput, lookupProvider));
+        // 掉落人肉的实体标签
+        generator.addProvider(event.includeServer(), new DragonsDelightEntityTypeTags(packOutput, lookupProvider, existingFileHelper));
     }
 }
