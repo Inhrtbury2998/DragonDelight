@@ -1,6 +1,7 @@
 package dragonsdelightteam.by.dragonsdelight.datagen;
 
 import dragonsdelightteam.by.dragonsdelight.DragonsDelight;
+import dragonsdelightteam.by.dragonsdelight.items.DarkDragonKnifeItem;
 import dragonsdelightteam.by.dragonsdelight.items.ModItemEnum;
 import dragonsdelightteam.by.dragonsdelight.items.ModItems;
 import net.minecraft.data.PackOutput;
@@ -24,6 +25,12 @@ public class ModItemModelProvider extends ItemModelProvider {
 
             // 方块物品（含 PLATE 与可放置食物方块）的模型由方块状态生成器处理
             if (item instanceof net.minecraft.world.item.BlockItem) {
+                continue;
+            }
+
+            // 刀等手持工具：parent 为 item/handheld，贴图为 items/<id>
+            if (item instanceof DarkDragonKnifeItem) {
+                withExistingParent(id, mcLoc("item/handheld")).texture("layer0", modLoc("item/" + id));
                 continue;
             }
 

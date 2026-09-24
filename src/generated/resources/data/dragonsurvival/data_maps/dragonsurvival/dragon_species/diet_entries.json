@@ -77,8 +77,8 @@
                   "duration": 1800,
                   "id": "dragonsurvival:cave_fire",
                   "neoforge:cures": [
-                    "milk",
-                    "protected_by_totem"
+                    "protected_by_totem",
+                    "milk"
                   ],
                   "show_icon": true
                 }
@@ -97,8 +97,8 @@
                   "duration": 1200,
                   "id": "minecraft:regeneration",
                   "neoforge:cures": [
-                    "milk",
-                    "protected_by_totem"
+                    "protected_by_totem",
+                    "milk"
                   ],
                   "show_icon": true
                 }
@@ -117,8 +117,8 @@
                   "duration": 6000,
                   "id": "farmersdelight:nourishment",
                   "neoforge:cures": [
-                    "milk",
-                    "protected_by_totem"
+                    "protected_by_totem",
+                    "milk"
                   ],
                   "show_icon": true
                 }
@@ -128,8 +128,8 @@
                   "duration": 3600,
                   "id": "dragonsurvival:cave_fire",
                   "neoforge:cures": [
-                    "milk",
-                    "protected_by_totem"
+                    "protected_by_totem",
+                    "milk"
                   ],
                   "show_icon": true
                 }
@@ -148,8 +148,8 @@
                   "duration": 6000,
                   "id": "farmersdelight:nourishment",
                   "neoforge:cures": [
-                    "milk",
-                    "protected_by_totem"
+                    "protected_by_totem",
+                    "milk"
                   ],
                   "show_icon": true
                 }
@@ -159,8 +159,8 @@
                   "duration": 2400,
                   "id": "minecraft:haste",
                   "neoforge:cures": [
-                    "milk",
-                    "protected_by_totem"
+                    "protected_by_totem",
+                    "milk"
                   ],
                   "show_icon": true
                 }
@@ -186,8 +186,8 @@
                   "duration": 6000,
                   "id": "farmersdelight:nourishment",
                   "neoforge:cures": [
-                    "milk",
-                    "protected_by_totem"
+                    "protected_by_totem",
+                    "milk"
                   ],
                   "show_icon": true
                 }
@@ -197,8 +197,8 @@
                   "duration": 2400,
                   "id": "dragonsurvival:cave_fire",
                   "neoforge:cures": [
-                    "milk",
-                    "protected_by_totem"
+                    "protected_by_totem",
+                    "milk"
                   ],
                   "show_icon": true
                 }
@@ -218,6 +218,19 @@
         {
           "items": "dragonsdelight:beggars_rabbit_cooked",
           "properties": {
+            "effects": [
+              {
+                "effect": {
+                  "duration": 3600,
+                  "id": "farmersdelight:nourishment",
+                  "neoforge:cures": [
+                    "protected_by_totem",
+                    "milk"
+                  ],
+                  "show_icon": true
+                }
+              }
+            ],
             "nutrition": 12,
             "saturation": 19.2
           }
@@ -308,8 +321,8 @@
                   "duration": 6000,
                   "id": "farmersdelight:nourishment",
                   "neoforge:cures": [
-                    "milk",
-                    "protected_by_totem"
+                    "protected_by_totem",
+                    "milk"
                   ],
                   "show_icon": true
                 }
@@ -328,8 +341,8 @@
                   "duration": 600,
                   "id": "minecraft:speed",
                   "neoforge:cures": [
-                    "milk",
-                    "protected_by_totem"
+                    "protected_by_totem",
+                    "milk"
                   ],
                   "show_icon": true
                 }
@@ -348,8 +361,8 @@
                   "duration": 600,
                   "id": "minecraft:speed",
                   "neoforge:cures": [
-                    "milk",
-                    "protected_by_totem"
+                    "protected_by_totem",
+                    "milk"
                   ],
                   "show_icon": true
                 }
@@ -368,8 +381,8 @@
                   "duration": 600,
                   "id": "minecraft:speed",
                   "neoforge:cures": [
-                    "milk",
-                    "protected_by_totem"
+                    "protected_by_totem",
+                    "milk"
                   ],
                   "show_icon": true
                 }
@@ -388,8 +401,8 @@
                   "duration": 600,
                   "id": "minecraft:speed",
                   "neoforge:cures": [
-                    "milk",
-                    "protected_by_totem"
+                    "protected_by_totem",
+                    "milk"
                   ],
                   "show_icon": true
                 }
@@ -408,8 +421,8 @@
                   "duration": 3600,
                   "id": "farmersdelight:nourishment",
                   "neoforge:cures": [
-                    "milk",
-                    "protected_by_totem"
+                    "protected_by_totem",
+                    "milk"
                   ],
                   "show_icon": true
                 }
@@ -443,8 +456,8 @@
                   "duration": 100,
                   "id": "minecraft:regeneration",
                   "neoforge:cures": [
-                    "milk",
-                    "protected_by_totem"
+                    "protected_by_totem",
+                    "milk"
                   ],
                   "show_icon": true
                 }
@@ -463,8 +476,8 @@
                   "duration": 1200,
                   "id": "farmersdelight:nourishment",
                   "neoforge:cures": [
-                    "milk",
-                    "protected_by_totem"
+                    "protected_by_totem",
+                    "milk"
                   ],
                   "show_icon": true
                 }
@@ -504,8 +517,8 @@
                   "duration": 600,
                   "id": "minecraft:speed",
                   "neoforge:cures": [
-                    "milk",
-                    "protected_by_totem"
+                    "protected_by_totem",
+                    "milk"
                   ],
                   "show_icon": true
                 }
@@ -524,8 +537,8 @@
                   "duration": 600,
                   "id": "minecraft:speed",
                   "neoforge:cures": [
-                    "milk",
-                    "protected_by_totem"
+                    "protected_by_totem",
+                    "milk"
                   ],
                   "show_icon": true
                 }
@@ -614,8 +627,8 @@
                   "duration": 6000,
                   "id": "farmersdelight:nourishment",
                   "neoforge:cures": [
-                    "milk",
-                    "protected_by_totem"
+                    "protected_by_totem",
+                    "milk"
                   ],
                   "show_icon": true
                 }
@@ -634,8 +647,8 @@
                   "duration": 6000,
                   "id": "farmersdelight:nourishment",
                   "neoforge:cures": [
-                    "milk",
-                    "protected_by_totem"
+                    "protected_by_totem",
+                    "milk"
                   ],
                   "show_icon": true
                 }
@@ -654,8 +667,8 @@
                   "duration": 6000,
                   "id": "farmersdelight:nourishment",
                   "neoforge:cures": [
-                    "milk",
-                    "protected_by_totem"
+                    "protected_by_totem",
+                    "milk"
                   ],
                   "show_icon": true
                 }
@@ -674,8 +687,8 @@
                   "duration": 6000,
                   "id": "farmersdelight:nourishment",
                   "neoforge:cures": [
-                    "milk",
-                    "protected_by_totem"
+                    "protected_by_totem",
+                    "milk"
                   ],
                   "show_icon": true
                 }
@@ -685,8 +698,8 @@
                   "duration": 1200,
                   "id": "minecraft:regeneration",
                   "neoforge:cures": [
-                    "milk",
-                    "protected_by_totem"
+                    "protected_by_totem",
+                    "milk"
                   ],
                   "show_icon": true
                 }
@@ -705,8 +718,8 @@
                   "duration": 3600,
                   "id": "farmersdelight:nourishment",
                   "neoforge:cures": [
-                    "milk",
-                    "protected_by_totem"
+                    "protected_by_totem",
+                    "milk"
                   ],
                   "show_icon": true
                 }
@@ -733,8 +746,8 @@
                   "duration": 1200,
                   "id": "minecraft:regeneration",
                   "neoforge:cures": [
-                    "milk",
-                    "protected_by_totem"
+                    "protected_by_totem",
+                    "milk"
                   ],
                   "show_icon": true
                 }
@@ -753,8 +766,8 @@
                   "duration": 3600,
                   "id": "farmersdelight:nourishment",
                   "neoforge:cures": [
-                    "milk",
-                    "protected_by_totem"
+                    "protected_by_totem",
+                    "milk"
                   ],
                   "show_icon": true
                 }
@@ -780,8 +793,8 @@
                   "duration": 6000,
                   "id": "minecraft:haste",
                   "neoforge:cures": [
-                    "milk",
-                    "protected_by_totem"
+                    "protected_by_totem",
+                    "milk"
                   ],
                   "show_icon": true
                 }
@@ -807,8 +820,8 @@
                   "duration": 600,
                   "id": "minecraft:speed",
                   "neoforge:cures": [
-                    "milk",
-                    "protected_by_totem"
+                    "protected_by_totem",
+                    "milk"
                   ],
                   "show_icon": true
                 }
@@ -827,8 +840,8 @@
                   "duration": 600,
                   "id": "minecraft:speed",
                   "neoforge:cures": [
-                    "milk",
-                    "protected_by_totem"
+                    "protected_by_totem",
+                    "milk"
                   ],
                   "show_icon": true
                 }

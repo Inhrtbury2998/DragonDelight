@@ -1,0 +1,13 @@
+{
+  "type": "neoforge:add_table",
+  "conditions": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type": "#dragonsdelight:drops_human_flesh"
+      }
+    }
+  ],
+  "table": "dragonsdelight:dark_dragon_knife_bonus"
+}

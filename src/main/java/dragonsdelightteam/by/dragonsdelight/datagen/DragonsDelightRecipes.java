@@ -13,6 +13,7 @@ import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
+import net.minecraft.data.recipes.SmithingTransformRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
@@ -54,7 +55,20 @@ public class DragonsDelightRecipes extends RecipeProvider {
         buildSmokingAndSmelting(output);
         buildCrafting(output);
         buildCutting(output);
+        buildSmithing(output);
         CookingRecipes.register(output);
+    }
+
+    private void buildSmithing(@NotNull RecipeOutput output) {
+        // 黯影龙刀：下界合金刀 + 黑暗升级模板 + 龙心
+        SmithingTransformRecipeBuilder.smithing(
+                        Ingredient.of(DSItems.DARK_UPGRADE.value()),
+                        Ingredient.of(vectorwing.farmersdelight.common.registry.ModItems.NETHERITE_KNIFE.get()),
+                        Ingredient.of(DSItems.ELDER_DRAGON_HEART.value()),
+                        RecipeCategory.COMBAT,
+                        ModItems.get(ModItemEnum.DARK_DRAGON_KNIFE).get())
+                .unlocks("has_netherite_knife", has(vectorwing.farmersdelight.common.registry.ModItems.NETHERITE_KNIFE.get()))
+                .save(output, ResourceLocation.fromNamespaceAndPath(DragonsDelight.MODID, "dark_dragon_knife_smithing"));
     }
 
     private void buildSmokingAndSmelting(@NotNull RecipeOutput output) {

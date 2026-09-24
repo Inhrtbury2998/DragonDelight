@@ -3,6 +3,7 @@ package dragonsdelightteam.by.dragonsdelight.items;
 import dragonsdelightteam.by.dragonsdelight.blocks.ModBlocks;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import vectorwing.farmersdelight.common.item.KnifeItem;
 
 import java.util.function.Function;
 
@@ -62,6 +63,9 @@ public enum ModItemEnum {
     COOKED_HUMAN_MEAT_SLICE("cooked_human_meat_slice", p -> p.food(ModFoods.COOKED_HUMAN_MEAT_SLICE)),
     CURING_HUMAN_MEAT("curing_human_meat", p -> p),
     CURING_HUMAN_MEAT_SLICE("curing_human_meat_slice", p -> p),
+    DARK_DRAGON_KNIFE("dark_dragon_knife",
+            DarkDragonKnifeItem::new,
+            props -> props.attributes(KnifeItem.createAttributes(DarkDragonKnifeItem.DARK_DRAGON_TIER, 0.5F, -2.0F)).fireResistant()),
     PLATE("plate", props -> new BlockItem(ModBlocks.PLATE.get(), props), p -> p),
     ;
 

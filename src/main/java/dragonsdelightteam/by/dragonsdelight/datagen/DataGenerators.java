@@ -3,9 +3,11 @@ package dragonsdelightteam.by.dragonsdelight.datagen;
 import dragonsdelightteam.by.dragonsdelight.DragonsDelight;
 import dragonsdelightteam.by.dragonsdelight.datagen.data_maps.DietEntryProvider;
 import dragonsdelightteam.by.dragonsdelight.datagen.tags.DragonsDelightEntityTypeTags;
+import dragonsdelightteam.by.dragonsdelight.datagen.tags.DragonsDelightItemTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
+import net.minecraft.data.tags.TagsProvider;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -33,5 +35,7 @@ public class DataGenerators {
         generator.addProvider(event.includeServer(), new DietEntryProvider(packOutput, lookupProvider));
         // 掉落人肉的实体标签
         generator.addProvider(event.includeServer(), new DragonsDelightEntityTypeTags(packOutput, lookupProvider, existingFileHelper));
+        // 物品标签
+        generator.addProvider(event.includeServer(), new DragonsDelightItemTags(packOutput, lookupProvider, CompletableFuture.completedFuture(TagsProvider.TagLookup.empty())));
     }
 }

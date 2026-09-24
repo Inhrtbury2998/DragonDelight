@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "dragonsurvival:elder_dragon_heart"
+  },
+  "base": {
+    "item": "farmersdelight:netherite_knife"
+  },
+  "result": {
+    "count": 1,
+    "id": "dragonsdelight:dark_dragon_knife"
+  },
+  "template": {
+    "item": "dragonsurvival:dark_upgrade"
+  }
+}

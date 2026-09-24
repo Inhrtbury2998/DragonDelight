@@ -3,6 +3,8 @@ package dragonsdelightteam.by.dragonsdelight.datagen.tags;
 import by.dragonsurvivalteam.dragonsurvival.registry.DSBlocks;
 import by.dragonsurvivalteam.dragonsurvival.registry.datagen.Translation;
 import dragonsdelightteam.by.dragonsdelight.DragonsDelight;
+import dragonsdelightteam.by.dragonsdelight.items.ModItemEnum;
+import dragonsdelightteam.by.dragonsdelight.items.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
@@ -13,6 +15,8 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import org.jetbrains.annotations.NotNull;
+import vectorwing.farmersdelight.common.tag.CommonTags;
+import vectorwing.farmersdelight.common.tag.ModTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -32,5 +36,9 @@ public class DragonsDelightItemTags extends ItemTagsProvider {
                 .add(DSBlocks.BLACK_KNIGHT_HELMET.value().asItem())
                 .add(DSBlocks.GOLDEN_KNIGHT_HELMET.value().asItem())
                 .add(DSBlocks.GRAY_KNIGHT_HELMET.value().asItem());
+
+        Item darkDragonKnife = ModItems.get(ModItemEnum.DARK_DRAGON_KNIFE).get();
+        tag(ModTags.Items.KNIVES).add(darkDragonKnife);
+        tag(CommonTags.Items.TOOLS_KNIFE).add(darkDragonKnife);
     }
 }

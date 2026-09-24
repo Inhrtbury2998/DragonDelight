@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "dragonsdelight:item/dark_dragon_knife"
+  }
+}
